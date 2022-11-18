@@ -26,13 +26,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ./bin/Debug/net6.0
+        run: dotnet publish -c Release -o .
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: .net-app
-          path: ./bin/Debug/net6.0
+          path: .
 
   deploy:
     runs-on: windows-latest
