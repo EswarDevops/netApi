@@ -1,5 +1,5 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-#  More GitHub Actions for Azure: https://github.com/Azure/actions
+# More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy ASP.Net Core app to Azure Web App - dotnetAPI2
 
@@ -33,6 +33,7 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+
   deploy:
     runs-on: windows-latest
     needs: build
@@ -52,5 +53,5 @@ jobs:
         with:
           app-name: 'dotnetAPI2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DA493F002C444D2DA9A3BF85552D1830 }}
           package: .
